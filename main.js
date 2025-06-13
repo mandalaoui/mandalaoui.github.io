@@ -132,6 +132,7 @@ function openVideoModal(videoUrl) {
 
 closeBtn.onclick = () => {
     videoFrame.src = ""; // Stop video
+    videoFrame.muted = true; 
     modal.style.display = "none";
 };
 
