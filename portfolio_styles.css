@@ -48,7 +48,7 @@ a:hover {
 }
 
 .section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 .section-title {
@@ -166,7 +166,6 @@ nav {
     gap: 2rem;
 }
 
-
 .hero-photo {
     width: 300px;
     height: 300px;
@@ -197,7 +196,6 @@ nav {
     color: white;
     margin-bottom: 2rem;
 }
-
 
 .skills,
 .resume,
@@ -433,12 +431,10 @@ nav {
     white-space: nowrap;
 }
 
-
 .contact-form {
     flex: 1.5;
     min-width: 300px;
 }
-
 
 .contact-form .form-group {
     display: flex;
@@ -549,4 +545,30 @@ footer {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.toast {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: var(--primary);
+  color: var(--text-color);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }

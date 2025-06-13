@@ -1,4 +1,4 @@
-<html lang="en"><head>
+<html lang="en"><head>	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
@@ -45,7 +45,6 @@
             </div>
         </div>
     </section>
-
 
 
     <!-- Skills Section -->
@@ -135,7 +134,7 @@
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
-                <div class="project-card" onclick="openVideoModal('videos/example.mp4')">
+                <div class="project-card" onclick="openVideoModal('videos/brick_breaker.mp4')">
                     <div class="project-info">
                         <div class="project-header">
                             <h3 class="project-title">Brick-Breaker</h3>
@@ -160,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card"  onclick="openVideoModal('videos/example.mp4')">
+                <div class="project-card"  onclick="openVideoModal('videos/Netfilm.mp4')">
                     <div class="project-info">
                         <div class="project-header">
                             <h3 class="project-title">Netfilm</h3>
@@ -270,7 +269,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/xzzgrvqw" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xzzgrvqw" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -321,6 +320,7 @@
         </div>
     </div>
 
+    <div id="toast" class="toast"></div>
 
     <script src="main.js"></script>
 

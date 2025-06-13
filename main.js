@@ -39,7 +39,6 @@ function setLightTheme() {
 }
 
 
-
 function loadTheme() {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
@@ -113,13 +112,10 @@ if (contactForm && contactStatus) {
         });
 
         if (response.ok) {
-            contactStatus.textContent = "✅ Message sent successfully!";
-            contactStatus.style.display = "block";
+            showToast("✅ Message sent successfully!");
             contactForm.reset();
         } else {
-            contactStatus.textContent = "❌ Something went wrong. Please try again.";
-            contactStatus.style.color = "crimson";
-            contactStatus.style.display = "block";
+            showToast("❌ Something went wrong. Please try again.", true);
         }
     });
 }
@@ -145,3 +141,15 @@ window.onclick = (event) => {
         modal.style.display = "none";
     }
 };
+
+function showToast(message, isError = false) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.style.backgroundColor = isError ? 'crimson' : getComputedStyle(document.documentElement).getPropertyValue('--primary');
+    toast.classList.add('show');
+    
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 4000);
+}
+
