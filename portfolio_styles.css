@@ -600,20 +600,26 @@ footer {
   }
   .hero {
     height: auto;
-    padding-top: 8rem;
-    }
+    padding-top: 12vh;
+    padding-bottom: 6vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
 
   .hero-photo {
-    width: 180px;
-    height: 180px;
+    width: min(40vw, 180px);
+    height: min(40vw, 180px);
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: min(6vw, 2rem);
   }
 
-    .hero-subtitle {
-    font-size: 0.8rem;
+  .hero-subtitle {
+    font-size: min(4vw, 1rem);
   }
 
+  .hero-text {
+    max-width: 90vw;
+  }
 }
