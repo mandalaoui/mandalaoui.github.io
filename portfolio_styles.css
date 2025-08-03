@@ -616,6 +616,11 @@ footer {
   padding: 1rem 0;
 }
 
+.projects-carousel#UniversityProjects {
+    margin-bottom: 2rem;
+}
+
+
 .projects-carousel::-webkit-scrollbar {
   display: none;
 }
