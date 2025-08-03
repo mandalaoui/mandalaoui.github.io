@@ -5,7 +5,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="portfolio_styles.css">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEPPHXE0E7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WEPPHXE0E7');
+    </script>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -35,12 +43,9 @@
                     <img src="images/profile.png" alt="Omer Mandalaoui" class="hero-photo" />
                 </div>
                 <div class="hero-text">
-                    <h1 class="hero-title">
-                        "Don't call it a dream,<br />
-                        call it a plan."
-                    </h1>
+                    <h1 class="hero-title">Turning Ideas<br />Into Reality</h1>
                     <p class="hero-subtitle">Omer Mandalaoui · Fullstack Developer</p>
-                    <a href="#contact" class="btn">Get in Touch</a>
+                    <a href="#projects" class="btn">Explore My Work</a>
                 </div>
             </div>
         </div>
@@ -132,63 +137,142 @@
     <!-- Projects Section -->
     <section id="projects" class="projects section">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card" onclick="openVideoModal('videos/brick_breaker.mp4')">
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3 class="project-title">Brick-Breaker</h3>
-                            <div class="project-image">
-                                <i class="fas fa-gamepad fa-2x"></i>
+            <h2 class="section-title">University Projects</h2>
+            <div class="projects-carousel-wrapper">
+                <!-- <button class="carousel-arrow left" onclick="scrollProjects(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button> -->
+                <div class="projects-carousel" id="projectsCarousel">                
+                    <div class="project-card">
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Netfilm</h3>
+                                <div class="project-image">
+                                    <i class="fas fa-film fa-2x"></i>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Fullstack movie streaming platform with content management, real-time recommendations, and an intuitive user experience on web and mobile. Includes REST API, React client, and Android app.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">Socket</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mandalaoui/Netfilm" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>                        
+                            </div>
+                            <div class="project-preview">
+                            <img src="images/netfilm.png" alt="netfilm Preview"   onclick="openVideoModal('videos/Netfilm.mp4')"/>
                             </div>
                         </div>
-                        <p class="project-description">A modular, object-oriented Arkanoid-style game in Java with animations, scoring, and collision logic using the biuoop library.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">OOP</span>
-                            <span class="tech-tag">biuoop</span>
-                            <span class="tech-tag">Ant</span>
+                    </div>
+                    <div class="project-card" >
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Brick-Breaker</h3>
+                                <div class="project-image">
+                                    <i class="fas fa-gamepad fa-2x"></i>
+                                </div>
+                            </div>
+                            <p class="project-description">A modular, object-oriented Arkanoid-style game in Java with animations, scoring, and collision logic using the biuoop library.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">OOP</span>
+                                <span class="tech-tag">biuoop</span>
+                                <span class="tech-tag">Ant</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mandalaoui/Brick-Breaker" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="project-preview">
+                            <img src="images/brick_breaker.png" alt="Brick-Breaker Preview" onclick="openVideoModal('videos/brick_breaker.mp4')"/>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mandalaoui/Brick-Breaker" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> GitHub
+                    </div>
+                </div>
+                <!-- <button class="carousel-arrow right" onclick="scrollProjects(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button> -->
+            </div>
+            <h2 class="section-title">Independent Projects</h2>
+            <div class="projects-carousel-wrapper">
+                <!-- <button class="carousel-arrow left" onclick="scrollProjects(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button> -->
+                <div class="projects-carousel" id="projectsCarousel">                
+                    <div class="project-card">
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">TrueValueIL</h3>
+                                <div class="project-image">
+                                    <i class="fas fa-building fa-2x"></i>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Interactive web tool for estimating real estate property value in the Em HaMoshavot neighborhood of Petah Tikva.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Wix Velo</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Wix CMS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.truevalueil.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class=""></i> To the website
+                                </a>                        
+                            </div>
+                            <div class="project-preview">
+                            <a href="https://www.truevalueil.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="images/TrueValueIL.png" alt="TrueValueIL Preview" />
                             </a>
-                        </div>
-                        <div class="project-preview">
-                        <img src="images/brick_breaker.png" alt="Brick-Breaker Preview" />
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card"  onclick="openVideoModal('videos/Netfilm.mp4')">
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3 class="project-title">Netfilm</h3>
-                            <div class="project-image">
-                                <i class="fas fa-film fa-2x"></i>
                             </div>
                         </div>
-                        <p class="project-description">
-                            Fullstack movie streaming platform with content management, real-time recommendations, and an intuitive user experience on web and mobile. Includes REST API, React client, and Android app.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">Socket</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mandalaoui/Netfilm" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>                        
-                        </div>
-                        <div class="project-preview">
-                        <img src="images/netfilm.png" alt="netfilm Preview" />
+                    </div>
+                    <div class="project-card">
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">AI משכנתאות</h3>
+                                <div class="project-image">
+                                    <i class="fas fa-chart-line fa-2x"></i>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                An AI-driven tool that analyzes your mortgage and provides personalized refinancing suggestions in Hebrew, with automated rate updates.                            </p>
+                            <div class="project-tech">  
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                                <span class="tech-tag">Render</span>
+                                <span class="tech-tag">Netlify</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://mortgage-ai.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                    <i class=""></i> To the website
+                                </a>                        
+                            </div>
+                            <div class="project-preview">
+                            <a href="https://www.truevalueil.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="images/mortgAI.png" alt="mortgAI Preview" />
+                            </a>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
+                <!-- <button class="carousel-arrow right" onclick="scrollProjects(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button> -->
             </div>
         </div>
     </section>

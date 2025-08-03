@@ -154,3 +154,11 @@ function showToast(message, isError = false) {
     }, 4000);
 }
 
+function scrollProjects(direction) {
+  const carousel = document.getElementById('projectsCarousel');
+  const scrollAmount = window.innerWidth * 0.4;
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
